@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1:3306/world</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="phpCourse" uuid="23735659-2439-4af1-bd0e-2cfd3475cc16">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/phpcourse</jdbc-url>
+    </data-source>
   </component>
 </project>
