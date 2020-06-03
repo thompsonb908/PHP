@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var bankAccount = {
+            owner: "Brandon",
+            type: "Savings",
+            balance: 2000,
+            withdraw: function (amount) {
+                if (amount > this.balance){
+                    alert("Not Enough balance!");
+                } else {
+                    this.balance -= amount;
+                    return this.balance;
+                }
+            },
+            deposit: function (amount) {
+                this.balance += amount;
+                return this.balance;
+            }
+        };
+
+        function BankAccount(owner, type){
+            this.owner = owner;
+            this.type = type;
+            this.balance = 0;
+            this.withdraw = function (amount) {
+                if (amount > this.balance){
+                    alert("Not Enough balance!");
+                } else {
+                    this.balance -= amount;
+                    return this.balance;
+                }
+            };
+            this.deposit = function (amount) {
+                this.balance += amount;
+            };
+        }
+    </script>
+</body>
+</html>
