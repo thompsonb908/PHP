@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Errors</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function getRoot(text) {
+            var num = Number(text);
+            if (isNaN(num)) {
+                throw text + " is not a number.";
+            }
+
+            if (num < 0){
+                throw num + " is not a positive value."
+            }
+            return Math.sqrt(num);
+        }
+
+        var text = "-1";
+
+        try {
+            var root = getRoot(text);
+            alert(root);
+        } catch (error) {
+            alert("Error: " + error);
+        } finally {
+
+        }
+    </script>
+</body>
+</html>

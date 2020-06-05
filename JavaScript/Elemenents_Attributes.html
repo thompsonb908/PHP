@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elements and Attributes</title>
+    <script type="text/javascript">
+        function test() {
+            var title = document.getElementById("title");
+            title.innerText = "New Title";
+        }
+
+        function addListElement() {
+            var ul = document.getElementsByTagName("ul")[0];
+
+            var li = document.createElement("li");
+            var node = document.createTextNode("List Element 4");
+            li.appendChild(node);
+
+            ul.appendChild(li);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Title</h1>
+
+    <p class="paragraph">Paragraph text 1</p>
+    <p class="paragraph">Paragraph text 1</p>
+
+    <input type="text"/>
+
+    <ul>
+        <li>List Element 1</li>
+        <li>List Element 2</li>
+        <li>List Element 3</li>
+    </ul>
+</body>
+</html>

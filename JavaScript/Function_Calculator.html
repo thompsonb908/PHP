@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Calculator</title>
+
+    <script type="text/javascript">
+        var resultElements;
+
+        function setDefault() {
+            var i;
+            for (i=0;i<resultElements.length;i++) {
+                var element = resultElements[i];
+                element.innerText = element.getAttribute('function') + "(x) = ";
+            }
+        }
+
+        function getUserInput() {
+            var rawValue = document.getElementById('userInput').value.trim();
+            if (rawValue.length === 0) {
+                throw "Please enter a value.";
+            }
+            var num = Number(rawValue);
+            if (isNaN(num)) {
+                throw rawValue + " is not a value.";
+            }
+            return num;
+        }
+
+        function calculateResults() {
+            try {
+                var x = getUserInput();
+            } catch (e) {
+                alert("Error: " + e);
+                return;
+            }
+            setDefault();
+            var i;
+            for (i=0;i<resultElements.length;i++) {
+                var element = resultElements[i];
+                var functionName = element.getAttribute('function');
+                var func = Math[functionName];
+                var result = func(x);
+                element.innerText = element.innerText + ' ' + result;
+            }
+        }
+
+
+        window.onload = function () {
+            resultElements = document.getElementsByClassName('result');
+            setDefault();
+            document.getElementById('btnCalculate').addEventListener('click', calculateResults)
+        }
+    </script>
+</head>
+<body>
+    <h1>Function Calculator</h1>
+
+    x = <input type="text" id="userInput"/>
+    <button id="btnCalculate">Calculate</button>
+
+    <br>
+    <br>
+
+    <p class="result" function="sin"></p>
+    <p class="result" function="cos"></p>
+    <p class="result" function="tan"></p>
+    <p class="result" function="log"></p>
+
+</body>
+</html>

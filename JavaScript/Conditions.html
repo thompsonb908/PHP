@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x = 1;
+        if (x===1){
+            document.write("x is 1\t");
+        }
+        else if (x === 2) {
+            document.write("x is 2\t");
+        }
+        else {
+            document.write("Default if\t");
+        }
+
+        var y = (x === 1) ? "x is 1" : "x is 2";
+        document.write("Y is: " + y);
+
+        switch (x) {
+            case 1:
+                document.write("switch 1\t");
+                break;
+            case 2:
+                document.write("switch 2\t");
+                break;
+            default:
+                document.write("default switch case\n");
+        }
+    </script>
+</body>
+</html>
