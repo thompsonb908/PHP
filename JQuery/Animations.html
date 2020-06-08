@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function doAnimation() {
+            var properties = {  fontSize:"10px",
+                                width:"100px",
+                                height:"100px",
+                                //opacity:"0.5",
+                                top:"+=30",
+                                left:"+=150"};
+            $('#title').animate(properties,1000);
+        }
+    </script>
+</head>
+<body>
+<h1 id="title" style="outline: 1px solid red; position: relative">title</h1>
+
+<p class="paragraph">Paragraph text 1</p>
+<p class="paragraph">Paragraph text 1</p>
+
+<input type="text"></input>
+<br>
+<button onclick="doAnimation()">Animate</button>
+
+<ul>
+    <li>List elemtent 1</li>
+    <li>List elemtent 2</li>
+    <li>List elemtent 3</li>
+    <li>List elemtent 4</li>
+    <li>List elemtent 5</li>
+</ul>
+
+
+</body>
+</html>

@@ -2,19 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Effects Demo</title>
+    <title>Selectors</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('li').click(function() {
-                $(this).hide(200);
-            });
-            $('button').click(function() {
-                $('ul').toggle(200);
-            });
-        });
-    </script>
 </head>
 <body>
     <h1 id="title">title</h1>
@@ -24,15 +14,20 @@
 
     <input type="text"></input>
     <br>
-    <button>Show</button>
-    <button>Toggle</button>
+
     <ul>
         <li>List elemtent 1</li>
         <li>List elemtent 2</li>
         <li>List elemtent 3</li>
-        <li>List elemtent 4</li>
+        <li class="test">List elemtent 4</li>
         <li>List elemtent 5</li>
     </ul>
+    <script>
+        $("input").css("outline", "1px solid red"); // by type
+        $("#title").css("outline","1px solid blue"); //by ID
+        $(".paragraph").css("outline","1px solid green"); // by class name
+        $("ul .test").css("outline","1px solid purple"); // can have multiple levels
+    </script>
 
-</body>
+    </body>
 </html>
